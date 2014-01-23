@@ -1,4 +1,4 @@
-package org.jboss.errai.demo.client.local;
+package nl.wisdelft.prototype.client.local;
 
 import org.jboss.errai.bus.client.framework.Configuration;
 

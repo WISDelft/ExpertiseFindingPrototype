@@ -1,20 +1,18 @@
-package org.jboss.errai.demo.client.local;
+package nl.wisdelft.prototype.client.local;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
-
+import nl.wisdelft.prototype.client.shared.UserComplaint;
 import org.jboss.errai.databinding.client.api.DataBinder;
 import org.jboss.errai.databinding.client.api.PropertyChangeEvent;
 import org.jboss.errai.databinding.client.api.PropertyChangeHandler;
-import org.jboss.errai.demo.client.shared.UserComplaint;
 import org.jboss.errai.ui.client.widget.HasModel;
 import org.jboss.errai.ui.client.widget.ValueImage;
 import org.jboss.errai.ui.shared.api.annotations.AutoBound;
 import org.jboss.errai.ui.shared.api.annotations.Bound;
 import org.jboss.errai.ui.shared.api.annotations.DataField;
 import org.jboss.errai.ui.shared.api.annotations.Templated;
-
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.Element;
 import com.google.gwt.user.client.ui.CheckBox;

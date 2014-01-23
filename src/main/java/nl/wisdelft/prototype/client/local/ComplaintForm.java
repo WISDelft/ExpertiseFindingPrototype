@@ -1,10 +1,9 @@
-package org.jboss.errai.demo.client.local;
+package nl.wisdelft.prototype.client.local;
 
 import javax.inject.Inject;
-
+import nl.wisdelft.prototype.client.shared.UserComplaint;
+import nl.wisdelft.prototype.client.shared.UserComplaintEndpoint;
 import org.jboss.errai.common.client.api.Caller;
-import org.jboss.errai.demo.client.shared.UserComplaint;
-import org.jboss.errai.demo.client.shared.UserComplaintEndpoint;
 import org.jboss.errai.enterprise.client.jaxrs.api.ResponseCallback;
 import org.jboss.errai.ui.client.widget.ValueImage;
 import org.jboss.errai.ui.nav.client.local.DefaultPage;
@@ -16,7 +15,6 @@ import org.jboss.errai.ui.shared.api.annotations.DataField;
 import org.jboss.errai.ui.shared.api.annotations.EventHandler;
 import org.jboss.errai.ui.shared.api.annotations.Model;
 import org.jboss.errai.ui.shared.api.annotations.Templated;
-
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.http.client.Response;
 import com.google.gwt.user.client.Window;

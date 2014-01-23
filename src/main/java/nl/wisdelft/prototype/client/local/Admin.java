@@ -1,15 +1,13 @@
-package org.jboss.errai.demo.client.local;
+package nl.wisdelft.prototype.client.local;
 
 import java.util.List;
-
 import javax.enterprise.event.Observes;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
-
+import nl.wisdelft.prototype.client.shared.UserComplaint;
 import org.jboss.errai.common.client.api.RemoteCallback;
 import org.jboss.errai.common.client.util.LogUtil;
-import org.jboss.errai.demo.client.shared.UserComplaint;
 import org.jboss.errai.jpa.sync.client.local.ClientSyncManager;
 import org.jboss.errai.jpa.sync.client.shared.SyncResponse;
 import org.jboss.errai.ui.client.widget.ListWidget;
@@ -18,7 +16,6 @@ import org.jboss.errai.ui.nav.client.local.Page;
 import org.jboss.errai.ui.nav.client.local.PageShown;
 import org.jboss.errai.ui.shared.api.annotations.DataField;
 import org.jboss.errai.ui.shared.api.annotations.Templated;
-
 import com.google.gwt.user.client.ui.Composite;
 
 /**

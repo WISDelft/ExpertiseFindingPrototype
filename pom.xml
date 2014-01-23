@@ -4,11 +4,9 @@
   xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.jboss.errai.demo</groupId>
-  <artifactId>errai-tutorial</artifactId>
+  <groupId>nl.wisdelft.prototype</groupId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>war</packaging>
-  <name>Errai::Tutorial</name>
 
   <properties>
     <errai.version>3.0.0.20131205-M3</errai.version>
@@ -339,4 +337,6 @@
       </pluginRepositories>
     </profile>
   </profiles>
+  <artifactId>wikicurator</artifactId>
+  <name>TUDelft - EEMCS - WIS - WikiCurator</name>
 </project>

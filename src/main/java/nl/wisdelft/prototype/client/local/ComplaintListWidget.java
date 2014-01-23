@@ -1,8 +1,7 @@
-package org.jboss.errai.demo.client.local;
+package nl.wisdelft.prototype.client.local;
 
-import org.jboss.errai.demo.client.shared.UserComplaint;
+import nl.wisdelft.prototype.client.shared.UserComplaint;
 import org.jboss.errai.ui.client.widget.ListWidget;
-
 import com.google.gwt.user.client.ui.HTMLPanel;
 
 /**

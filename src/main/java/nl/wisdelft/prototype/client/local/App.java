@@ -1,14 +1,12 @@
-package org.jboss.errai.demo.client.local;
+package nl.wisdelft.prototype.client.local;
 
 import java.util.Collections;
 import java.util.List;
-
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
-
+import nl.wisdelft.prototype.client.shared.UserComplaint;
 import org.jboss.errai.common.client.api.RemoteCallback;
 import org.jboss.errai.common.client.util.LogUtil;
-import org.jboss.errai.demo.client.shared.UserComplaint;
 import org.jboss.errai.enterprise.client.jaxrs.api.RestClient;
 import org.jboss.errai.ioc.client.api.EntryPoint;
 import org.jboss.errai.jpa.sync.client.local.ClientSyncManager;

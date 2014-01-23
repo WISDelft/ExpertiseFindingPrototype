@@ -1,15 +1,13 @@
-package org.jboss.errai.demo.server;
+package nl.wisdelft.prototype.server;
 
 import java.util.List;
-
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
 import javax.persistence.EntityExistsException;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-
-import org.jboss.errai.demo.client.shared.UserComplaint;
+import nl.wisdelft.prototype.client.shared.UserComplaint;
 import org.jboss.errai.jpa.sync.client.shared.DataSyncService;
 import org.jboss.errai.jpa.sync.client.shared.JpaAttributeAccessor;
 import org.jboss.errai.jpa.sync.client.shared.SyncRequestOperation;

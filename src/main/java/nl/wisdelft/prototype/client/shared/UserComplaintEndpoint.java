@@ -1,4 +1,4 @@
-package org.jboss.errai.demo.client.shared;
+package nl.wisdelft.prototype.client.shared;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
