@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+<title>WikiCurator Dashboard</title>
+
+<!-- Bootstrap core CSS -->
+<link href="../../../../../../webapp/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!--  App custom css -->
+<link href="../../../../../../webapp/css/application.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+	<div id="app-template">
+		<div data-field="headerWidget"></div>
+		
+		<div class="container dashboard">
+
+			<div class="row">
+				<span class="h1 col-lg-6"><small>Curating</small> Lutherse_Kerk_(Delft)</span> Overall progress: 60%
+				<div class="progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+						<span class="sr-only">60% Complete</span>
+					</div>
+				</div>
+
+
+
+				<div class="panel-group" id="accordion">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">dbpedia-owl:Missing_property </a>
+							</h4>
+						</div>
+						<div id="collapseOne" class="panel-collapse collapse in">
+							<div class="panel-body">
+								<div class="progress col-lg-offset-6">
+									<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+										style="width: 80%;">
+										<span class="sr-only">80% Complete</span>
+									</div>
+								</div>
+								<table class="table">
+									<tr>
+										<th>Contributor</th>
+										<th>Status</th>
+										<th>Link to contribution</th>
+									</tr>
+									<tr class="success">
+										<td>@johndoe</td>
+										<td>Completed</td>
+										<td><button type="button" class="btn btn-primary">See contribution</button></td>
+									</tr>
+									<tr>
+										<td>@janedoe</td>
+										<td>Started</td>
+										<td><button type="button" class="btn disabled ">See contribution</button></td>
+									</tr>
+									<tr class="success">
+										<td>Phil</td>
+										<td>Completed</td>
+										<td><button type="button" class="btn btn-primary">See contribution</button></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">dbpedia-owl:Missing_image </a>
+							</h4>
+						</div>
+						<div id="collapseTwo" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="progress col-lg-offset-6">
+									<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
+										style="width: 20%;">
+										<span class="sr-only">20% Complete</span>
+									</div>
+								</div>
+								<table class="table">
+									<tr>
+										<th>Contributor</th>
+										<th>Status</th>
+										<th>Link to contribution</th>
+									</tr>
+									<tr class="danger">
+										<td>@johndoe</td>
+										<td>Declined</td>
+										<td><button type="button" class="btn disabled">See contribution</button></td>
+									</tr>
+									<tr class="danger">
+										<td>@janedoe</td>
+										<td>Declined</td>
+										<td><button type="button" class="btn disabled">See contribution</button></td>
+									</tr>
+									<tr>
+										<td>Phil</td>
+										<td>Started</td>
+										<td><button type="button" class="btn disabled">See contribution</button></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!--/row-->
+
+			
+
+		</div>
+		<!--/.container-->
+	</div>
+</body>
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="../../../../../../webapp/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../../../../webapp/js/application.js"></script>
+</html>
+
