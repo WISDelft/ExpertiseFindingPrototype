@@ -5,19 +5,25 @@ package nl.wisdelft.prototype.client.local.widgets;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.annotation.PostConstruct;
+
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
+
 import nl.wisdelft.prototype.client.shared.CurationConfiguration;
 import nl.wisdelft.prototype.client.shared.Property;
+
+import org.jboss.errai.databinding.client.api.DataBinder;
 import org.jboss.errai.ioc.client.api.AfterInitialization;
+import org.jboss.errai.ui.shared.api.annotations.AutoBound;
+import org.jboss.errai.ui.shared.api.annotations.Bound;
 import org.jboss.errai.ui.shared.api.annotations.DataField;
 import org.jboss.errai.ui.shared.api.annotations.EventHandler;
 import org.jboss.errai.ui.shared.api.annotations.Templated;
-import com.google.gwt.core.shared.GWT;
+
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.ListBox;
 
 /**
@@ -27,7 +33,19 @@ import com.google.gwt.user.client.ui.ListBox;
 public class Step1Widget extends Composite implements StepWidget {
 	@Inject
 	EntityManager em;
-	
+
+	@Inject
+	@AutoBound
+	DataBinder<CurationConfiguration> config;
+
+	@Inject
+	private CurationConfiguration c;
+
+	@Inject
+	@Bound(property = "title")
+	@DataField
+	Label pageTitle;
+
 	@Inject
 	@DataField
 	ListBox typeAll;
@@ -44,28 +62,23 @@ public class Step1Widget extends Composite implements StepWidget {
 	@DataField
 	Button btnRightType;
 
-	@Inject
-	CurationConfiguration config;
-
-	@PostConstruct
+	@AfterInitialization
 	private void loadData() {
-		typeAll.addItem("test");
-		typeAll.addItem("test2");
-		typeAll.addItem("test3");
+		config.setModel(c);
+		for (Property p : config.getModel().getPossibleTypes()) {
+			typeAll.addItem(p.getKey());
+		}
 	}
 
 	@EventHandler("btnRightType")
 	private void moveRight(ClickEvent e) {
 		moveSelected(typeAll, typeSelected);
-		List<Property> selectedItems = new ArrayList<Property>();
+		List<Property> selectedTypes = new ArrayList<Property>();
 		for (int i = 0; i < typeSelected.getItemCount(); i++) {
-			selectedItems.add(new Property(typeSelected.getItemText(i)));
+			selectedTypes.add(new Property(typeSelected.getItemText(i)));
 		}
-		config.setSelectedTypes(selectedItems);
-		GWT.log("Config ID: "+config.getId());
-		em.persist(config);
-		em.flush();
-		
+		config.getModel().setSelectedTypes(selectedTypes);
+
 	}
 
 	@EventHandler("btnLeftType")

@@ -5,14 +5,14 @@ package nl.wisdelft.prototype.client.shared;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.inject.Singleton;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
+
 import org.jboss.errai.common.client.api.annotations.Portable;
 import org.jboss.errai.databinding.client.api.Bindable;
 
@@ -25,59 +25,61 @@ import org.jboss.errai.databinding.client.api.Bindable;
 @Entity
 @Singleton
 public class CurationConfiguration {
-	private String pageName;
-	private String pageURL;
-	
-	@OneToMany(cascade=CascadeType.ALL)	
+	@Id
+	private String resourceUrl;
+
+	String title;
+
+	@OneToMany(cascade = CascadeType.ALL)
 	private List<Property> selectedTypes = new ArrayList<Property>();
-	
-	@OneToMany(cascade=CascadeType.ALL)	
+
+	@OneToMany(cascade = CascadeType.ALL)
+	private List<Property> possibleTypes = new ArrayList<Property>();
+
+	@OneToMany(cascade = CascadeType.ALL)
 	private List<Property> selectedProperties = new ArrayList<Property>();
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
+	@OneToMany(cascade = CascadeType.ALL)
+	private List<Property> possibleProperties = new ArrayList<Property>();
 
-	public String getPageName() {
-		
-		return pageName;
+	public CurationConfiguration() {
+		// TODO Auto-generated constructor stub
 	}
 
-	public void setPageName(String pageName) {
-		this.pageName = pageName;
+	public CurationConfiguration(String resourceUrl) {
+		this.resourceUrl = resourceUrl;
 	}
 
-	public String getPageURL() {
-		return pageURL;
-	}
-
-	public void setPageURL(String pageURL) {
-		this.pageURL = pageURL;
+	public void setConfigFromPage(DBPediaPage page) {
+		setTitle(page.getLabel());
+		setResourceUrl(page.getResourceUrl());
+		setPossibleTypes(page.getTypes());
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((resourceUrl == null) ? 0 : resourceUrl.hashCode());
 		return result;
 	}
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj) return true;
-		if (obj == null) return false;
-		if (getClass() != obj.getClass()) return false;
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
 		CurationConfiguration other = (CurationConfiguration) obj;
-		if (id == null) {
-			if (other.id != null) return false;
-		}
-		else if (!id.equals(other.id)) return false;
-		return true;
+		if (resourceUrl == null)
+			return false;
+		return resourceUrl.equals(other.resourceUrl);
 	}
 
-	public Long getId() {
-		return id;
+	public String getResourceUrl() {
+		return resourceUrl;
 	}
 
 	public List<Property> getSelectedTypes() {
@@ -86,6 +88,42 @@ public class CurationConfiguration {
 
 	public void setSelectedTypes(List<Property> selectedTypes) {
 		this.selectedTypes = selectedTypes;
+	}
+
+	public List<Property> getSelectedProperties() {
+		return selectedProperties;
+	}
+
+	public void setSelectedProperties(List<Property> selectedProperties) {
+		this.selectedProperties = selectedProperties;
+	}
+
+	public void setResourceUrl(String resourceUrl) {
+		this.resourceUrl = resourceUrl;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public List<Property> getPossibleTypes() {
+		return possibleTypes;
+	}
+
+	public void setPossibleTypes(List<Property> possibleTypes) {
+		this.possibleTypes = possibleTypes;
+	}
+
+	public List<Property> getPossibleProperties() {
+		return possibleProperties;
+	}
+
+	public void setPossibleProperties(List<Property> possibleProperties) {
+		this.possibleProperties = possibleProperties;
 	}
 
 }
