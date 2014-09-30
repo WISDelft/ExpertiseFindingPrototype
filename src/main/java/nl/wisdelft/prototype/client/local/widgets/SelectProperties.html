@@ -1,0 +1,41 @@
+<div class="app-template">
+	<div class="row">
+		<div class="col-12 col-sm-12 col-lg-12">
+			<h2>Select relevant properties</h2>
+			<p class="bg-info img-rounded">We identified all the DBPedia resources that were
+				of the specified type. We compared all properties of those resources
+				with those curated page. Properties currently missing in the curated
+				page are shown. Please drag the properties to the right to start the
+				enrichment process.</p>
+		</div>
+		<div class="col-5 col-lg-5 col-sm-12">
+			<select multiple class="form-control entities" id="all">
+				<option>dbpedia-owl:ArchitecturalStructure</option>
+				<option>dbpedia-owl:Building</option>
+				<option>dbpedia-owl:Church</option>
+				<option>dbpedia-owl:Place</option>
+				<option>dbpedia-owl:ReligiousBuilding</option>
+				<option>dbpedia-owl:Wikidata:Q532</option>
+				<option>http://schema.org/Place</option>
+				<option>owl:Thing</option>
+				<option>dbpedia-nl:Categorie:Kerkgebouw_in_Delft</option>
+				<option>dbpedia-nl:Categorie:Luthers_kerkgebouw_in_Nederland</option>
+				<option>dbpedia-nl:Categorie:Rijksmonument_in_Delft</option>
+			</select>
+		</div>
+		<div id="moveButtons" class="col-2 col-lg-2 col-sm-12">
+			<button type="button" class="btn btn-default" id="btnLeft">
+				<span class="glyphicon glyphicon-arrow-left"></span>
+			</button>
+			<button type="button" class="btn btn-default" id="btnRight">
+				<span class="glyphicon glyphicon-arrow-right"></span>
+			</button>
+		</div>
+		<div class="col-5 col-lg-5 col-sm-12">
+			<select multiple class="form-control entities" id="selected">
+			</select>
+		</div>
+
+	</div>
+</div>
+

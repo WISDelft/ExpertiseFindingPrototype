@@ -2,8 +2,12 @@
  * Style tweaks
  * --------------------------------------------------
  */
-html,body {
+html, body {
 	overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+
+.container {
+	width: 1500px;
 }
 
 body {
@@ -18,15 +22,20 @@ footer {
 * Shared for steps
 */
 .summary dd {
-	padding-left: 10px; overflow: hidden; text-overflow: ellipsis;
+	padding-left: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .summary .h3 {
-	color: gray; text-transform: uppercase;
+	color: gray;
+	text-transform: uppercase;
 }
 
 .minitron {
-	background-color: #eee; padding: 10px; border-radius: 6px;
+	background-color: #eee;
+	padding: 10px;
+	border-radius: 6px;
 	margin-bottom: 30px;
 }
 
@@ -38,19 +47,37 @@ footer {
 	margin-bottom: 10px;
 }
 
+.bg-info, .bg-warning {
+	padding: 15px;
+	border-radius: 5px;
+}
+
+.border-radius (@radius ){ .border-top-radius (@radius); .border-right-radius
+	(@radius); .border-bottom-radius (@radius); .border-left-radius
+	(@radius);
+	
+}
+
 /*
 * Step 1
 */
 .step1 .entities {
-	position: relative; float: left; width: 45%; height: 200px;
+	position: relative;
+	float: left;
+	width: 45%;
+	height: 200px;
 }
 
 .step1 #moveButtons {
-	position: relative; float: left; margin: 0 5px 0 5px;
+	position: relative;
+	float: left;
+	margin: 0 5px 0 5px;
 }
 
 .step1 #moveButtons button {
-	position: relative; float: left; clear: both;
+	position: relative;
+	float: left;
+	clear: both;
 }
 
 /*
@@ -67,7 +94,7 @@ footer {
 /*
 * Step 3
 */
-.step3 .twitter,.step3 .reddit {
+.step3 .twitter, .step3 .reddit {
 	display: none;
 }
 
@@ -81,7 +108,6 @@ footer {
 /*
 * Dashboard
 */
-
 /*
 * Footer
 */
@@ -90,5 +116,31 @@ footer img {
 }
 
 footer img:last-child {
-	margin-left: 10px; height: 30px; vertical-align: bottom; height: 30px;
+	margin-left: 10px;
+	height: 30px;
+	vertical-align: bottom;
+	height: 30px;
+}
+
+/*
+* SPINNER
+*/
+.btn i.fa-refresh {
+	display: none;
+}
+
+.btn.active i.fa-refresh {
+	display: inline-block;
+}
+
+/***
+*** SELECT CONTRIBUTORS
+***/
+.propertyList {
+	max-height: 500px;
+	overflow: scroll;
+}
+
+.contentRight img {
+	width: 100%;
 }

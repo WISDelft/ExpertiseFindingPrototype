@@ -1,0 +1,85 @@
+<div class="app-template">
+	<div class="row">
+		<div class="col-sm-12">
+			<h2>Need specification</h2>
+			<p class="bg-info img-rounded">
+				You have selected the resource and the properties to enrich. To find
+				contributors we need to express the knowledge need in a structured
+				way. On this page you can choose how you want to express the
+				knowledge need (either <strong>manual</strong>, <strong>automatic</strong>
+				or <strong>supervised</strong>) and see 
+			</p>
+			<form role="form">
+				<div class="radio">
+					<label> <input type="radio" name="optionsRadios"
+						id="optionsRadios1" value="manual" disabled> Manual: you
+						provide the domain knowledge yourself
+					</label>
+				</div>
+				<div class="radio">
+					<label> <input type="radio" name="optionsRadios"
+						id="optionsRadios2" value="automatic" disabled> Automatic:
+						the domain knowledge is inferred from the domain of the resource
+					</label>
+				</div>
+				<div class="radio">
+					<label> <input type="radio" name="optionsRadios"
+						id="optionsRadios3" value="supervised" checked>
+						Supervised: you specify the domain knowledge using an external
+						knowledge source
+					</label>
+				</div>
+				<hr />
+				<div class="form-group">
+					<label for="ddlKnowledgeModel" class="control-label">Knowledge
+						source</label> <select class="form-control" id="ddlKnowledgeModel">
+						<option selected>Wordnet Domains</option>
+						<option>Iconclass</option>
+					</select>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-9">
+			<div class="well" data-field="wnDescription">Wordnet Domains
+				contains a mapping from 168 domains to words in the lexical database
+				Wordnet. Drag the domains to the right for which you want to find
+				knowledgeable potential contributors.</div>
+			<div data-field="icDescription" class="well">IconClass is a
+				hierarchically ordered subject-specific classification system and is
+				commonly used to annotate works of art. Drag the domains to the
+				right for which you want to find knowledgeable potential
+				contributors.</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-5 col-lg-5 col-sm-12">
+			<select multiple class="form-control" id="all">
+				<option>dbpedia-owl:ArchitecturalStructure</option>
+				<option>dbpedia-owl:Building</option>
+				<option>dbpedia-owl:Church</option>
+				<option>dbpedia-owl:Place</option>
+				<option>dbpedia-owl:ReligiousBuilding</option>
+				<option>dbpedia-owl:Wikidata:Q532</option>
+				<option>http://schema.org/Place</option>
+				<option>owl:Thing</option>
+				<option>dbpedia-nl:Categorie:Kerkgebouw_in_Delft</option>
+				<option>dbpedia-nl:Categorie:Luthers_kerkgebouw_in_Nederland</option>
+				<option>dbpedia-nl:Categorie:Rijksmonument_in_Delft</option>
+			</select>
+		</div>
+		<div id="moveButtons" class="col-2 col-lg-2 col-sm-12">
+			<button type="button" class="btn btn-default" id="btnLeft">
+				<span class="glyphicon glyphicon-arrow-left"></span>
+			</button>
+			<button type="button" class="btn btn-default" id="btnRight">
+				<span class="glyphicon glyphicon-arrow-right"></span>
+			</button>
+		</div>
+		<div class="col-5 col-lg-5 col-sm-12">
+			<select multiple class="form-control" id="selected">
+			</select>
+		</div>
+	</div>
+</div>

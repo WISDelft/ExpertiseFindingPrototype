@@ -1,0 +1,47 @@
+<div class="app-template">
+	<div class="row">
+		<div class="col-sm-12">
+			<h2>Select resource</h2>
+			<p class="bg-info img-rounded">Enter a concept (e.g. a DBPedia resource url), a semantic representation of an artwork or click one of the example links.</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<form role="form">
+				<div class="form-group">
+					<label for="tbUrl">Select a concept or artwork</label><br /> Examples: <a
+						data-field="lnkExample1"
+						href="http://dbpedia.org/resource/Delft_University_of_Technology">TUDelft</a>&nbsp;&nbsp;&nbsp;
+					<a data-field="lnkExample2"
+						href="http://dbpedia.org/resource/Sunflower">Sunflower</a>&nbsp;&nbsp;&nbsp;
+					<a data-field="lnkExample3"
+						href="http://dbpedia.org/resource/The_Night_Watch">The Night
+						Watch</a> &nbsp;&nbsp;&nbsp; <a data-field="lnkExample4"
+						href="http://purl.org/collections/nl/rma/RP-P-2004-508A-9">Vogel
+						bij rood blad</a> <input class="form-control input-lg" id="tbUrl"
+						type="text"
+						placeholder="http://dbpedia.org/resource/Delft_University_of_Technology"
+						value="http://dbpedia.org/resource/Delft_University_of_Technology" />
+
+				</div>
+				<button type="button" id="btnFindResource" class="btn btn-danger">
+					<i class="fa fa-refresh fa-spin"></i> Select
+				</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-12">
+			<h2>
+				<span data-field="pageTitle"></span>
+			</h2>
+		</div>
+		<div class="col-sm-9">
+			<div class="well">
+				<span data-field="pageAbstract"></span>
+			</div>
+		</div>
+		<img class="col-sm-3" data-field="imgResource" />
+	</div>
+</div>

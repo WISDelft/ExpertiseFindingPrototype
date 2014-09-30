@@ -1,0 +1,342 @@
+<div class="app-template">
+	<div class="row">
+		<div class="col-sm-12">
+			<h2>Search for experts</h2>
+			<p class="bg-info">Select the strategies and the query for
+				identifying potential experts.</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<form role="form" class="form-horizontal">
+				<div class="form-group">
+					<label for="ddlSearchTerms" class="col-sm-4">Search terms </label>
+					<div class="col-sm-6">
+						<select multiple class="form-control" data-field="ddlSearch"
+							id="ddlSearch">
+						</select>
+					</div>
+					<button class="btn btn-primary" type="button" data-toggle="modal"
+						data-target="#advancedSearch">Advanced</button>
+				</div>
+				<div class="form-group">
+					<label for="ddlPlatform" class="col-sm-4">Social media
+						platform <span class="fa fa-lg fa-reddit"></span> / <span
+						class="fa fa-lg fa-twitter"></span>
+					</label>
+					<div class="col-sm-4">
+						<select class="form-control" data-field="ddlPlatform">
+							<option>Reddit</option>
+							<option>Twitter</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="ddlPlatform" class="col-sm-4">Extraction
+						strategy</label>
+					<div class="col-sm-4">
+						<select class="form-control" data-field="ddlExtractionStrategy">
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="ddlPlatform" class="col-sm-4">Identification
+						strategy</label>
+					<div class="col-sm-4">
+						<select class="form-control"
+							data-field="ddlIdentificationStrategy">
+						</select>
+					</div>
+				</div>
+				<button data-field="btnSearch" type="button" class="btn btn-danger">
+					<i class="fa fa-refresh fa-spin"></i> Search
+				</button>
+			</form>
+		</div>
+	</div>
+	<div class="row">
+		<div data-field="pnlContributors1" class="col-sm-12 hidden">
+			<h2>Top 3 potential experts</h2>
+			<div class="col-sm-8">
+				<table class="table table-striped contributors">
+					<tr>
+						<th>Profile</th>
+						<th>Platform</th>
+						<th class="col-sm-2">Score</th>
+						<th>Invite</th>
+					</tr>
+					<tr>
+						<td><a href="http://www.reddit.com/user/birdsbirdsbirds">http://www.reddit.com/user/birdsbirdsbirds</a></td>
+						<td><img src="./images/reddit.png" height="20px" /></td>
+						<td><div class="input-group ">
+								<span class="input-group-addon">1282</span>
+								<button type="button" class="btn btn-primary form-control"
+									data-toggle="modal" data-target="#evidence1">See
+									evidence</button>
+							</div></td>
+						<td><a class="btn btn-primary" target="_blank">Invite</a></td>
+					</tr>
+					<tr>
+						<td><a href="http://www.reddit.com/user/giant_kiwi">http://www.reddit.com/user/giant_kiwi</a></td>
+						<td><img src="./images/reddit.png" height="20px" /></td>
+
+						<td class="col-sm-3"><div class="input-group ">
+								<span class="input-group-addon">1189</span>
+								<button type="button" class="btn btn-primary form-control">See
+									evidence</button>
+							</div></td>
+						<td><a class="btn btn-primary" target="_blank">Invite</a></td>
+					</tr>
+					<tr>
+						<td><a href="http://www.reddit.com/user/birdingninja">http://www.reddit.com/user/birdingninja</a></td>
+						<td><img src="./images/reddit.png" height="20px" /></td>
+
+						<td class="col-sm-3"><div class="input-group ">
+								<span class="input-group-addon">1180</span>
+								<button type="button" class="btn btn-primary form-control">See
+									evidence</button>
+							</div></td>
+						<td><a class="btn btn-primary" target="_blank">Invite</a></td>
+					</tr>
+				</table>
+			</div>
+			<img src="./images/gauge_users1.png" class="col-sm-4"></img>
+		</div>
+		<div data-field="pnlContributors2" class="col-sm-12 hidden">
+			<h2>No users found</h2>
+			<p class="bg-warning">
+				No users on the platform <b>Reddit</b> have been found for the
+				query: <br /> <i><span data-field="lblQuery"></span></i>
+			</p>
+
+		</div>
+		<div data-field="pnlContributors3" class="col-sm-12 hidden">
+			<h2>Top 3 potential experts</h2>
+			<div class="col-sm-8">
+				<table class="table table-striped contributors">
+					<tr>
+						<th>Profile</th>
+						<th>Platform</th>
+						<th class="col-sm-2">Score</th>
+						<th>Invite</th>
+					</tr>
+					<tr>
+						<td><a href="https://twitter.com/constantsun">https://twitter.com/constantsun</a></td>
+						<td><img src="./images/twitter.png" height="20px" /></td>
+						<td><div class="input-group ">
+								<span class="input-group-addon">2</span>
+								<button type="button" class="btn btn-primary form-control"
+									data-toggle="modal" data-target="#evidence3">See
+									evidence</button>
+							</div></td>
+						<td><a class="btn btn-primary" target="_blank">Invite</a></td>
+					</tr>
+					<tr>
+						<td><a href="https://twitter.com/Gadiouka">https://twitter.com/Gadiouka</a></td>
+						<td><img src="./images/twitter.png" height="20px" /></td>
+
+						<td class="col-sm-3"><div class="input-group ">
+								<span class="input-group-addon">2</span>
+								<button type="button" class="btn btn-primary form-control">See
+									evidence</button>
+							</div></td>
+						<td><a class="btn btn-primary" target="_blank">Invite</a></td>
+					</tr>
+					<tr>
+						<td><a href="https://twitter.com/yocla14">https://twitter.com/yocla14</a></td>
+						<td><img src="./images/twitter.png" height="20px" /></td>
+
+						<td class="col-sm-3"><div class="input-group ">
+								<span class="input-group-addon">2</span>
+								<button type="button" class="btn btn-primary form-control">See
+									evidence</button>
+							</div></td>
+						<td><a class="btn btn-primary" target="_blank">Invite</a></td>
+					</tr>
+				</table>
+			</div>
+			<img src="./images/gauge_users3.png" class="col-sm-4"></img>
+		</div>
+
+		<div data-field="pnlContributors4" class="col-sm-12 hidden">
+			<h2>Top 3 potential experts</h2>
+			<div class="col-sm-8">
+				<table class="table table-striped contributors">
+					<tr>
+						<th>Profile</th>
+						<th>Platform</th>
+						<th class="col-sm-2">Score</th>
+						<th>Invite</th>
+					</tr>
+					<tr>
+						<td><a href="http://www.reddit.com/user/hotspotbirding">http://www.reddit.com/user/hotspotbirding</a></td>
+						<td><img src="./images/reddit.png" height="20px" /></td>
+						<td><div class="input-group ">
+								<span class="input-group-addon">0.95</span>
+								<button type="button" class="btn btn-primary form-control"
+									data-toggle="modal" data-target="#evidence4">See
+									evidence</button>
+							</div></td>
+						<td><a
+							href="http://www.reddit.com/message/compose/?to=test&subject=Please contribute your knowledge&message=Based on your Reddit submissions we believe you are familiar with birds originating from Asia. We need help in identifying the names of such birds on artworks. If you'd like to help, please go to http://accurator.nl%20to%20contribute."
+							class="btn btn-primary" target="_blank">Invite</a></td>
+					</tr>
+					<tr>
+						<td><a href="http://www.reddit.com/user/rkmorten">http://www.reddit.com/user/rkmorten</a></td>
+						<td><img src="./images/reddit.png" height="20px" /></td>
+
+						<td class="col-sm-3"><div class="input-group ">
+								<span class="input-group-addon">0.89</span>
+								<button type="button" class="btn btn-primary form-control">See
+									evidence</button>
+							</div></td>
+						<td><a
+							href="http://www.reddit.com/message/compose/?to=test&subject=Please contribute your knowledge&message=Based on your Reddit submissions we believe you are familiar with birds originating from Asia. We need help in identifying the names of such birds on artworks. If you'd like to help, please go to http://accurator.nl%20to%20contribute."
+							class="btn btn-primary" target="_blank">Invite</a></td>
+					</tr>
+					<tr>
+						<td><a href="http://www.reddit.com/user/adremeaux">http://www.reddit.com/user/adremeaux</a></td>
+						<td><img src="./images/reddit.png" height="20px" /></td>
+
+						<td class="col-sm-3"><div class="input-group ">
+								<span class="input-group-addon">0.88</span>
+								<button type="button" class="btn btn-primary form-control">See
+									evidence</button>
+							</div></td>
+						<td><a
+							href="http://www.reddit.com/message/compose/?to=test&subject=Please contribute your knowledge&message=Based on your Reddit submissions we believe you are familiar with birds originating from Asia. We need help in identifying the names of such birds on artworks. If you'd like to help, please go to http://accurator.nl%20to%20contribute."
+							class="btn btn-primary" target="_blank">Invite</a></td>
+					</tr>
+				</table>
+			</div>
+			<img src="./images/gauge_users4.png" class="col-sm-4"></img>
+		</div>
+
+
+
+		<div class="modal fade " id="advancedSearch" tabindex="-1"
+			role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">Advanced query
+							formulation</h4>
+					</div>
+					<div class="modal-body">
+						<div class="btn-group">
+							<button type="button" data-field="btnItemStrategy"
+								class="btn btn-primary btnactive">From item</button>
+							<button type="button" data-field="btnRelatedItemStrategy"
+								class="btn btn-default disabled">From related items</button>
+							<button type="button" data-field="btnKBStrategy"
+								class="btn btn-default">From knowledge base</button>
+						</div>
+						<div class="propertyList well">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th>Select</th>
+										<th>Property name</th>
+										<th>Description</th>
+										<th>Value</th>
+									</tr>
+								</thead>
+								<tbody data-field="pnlProperties">
+								</tbody>
+							</table>
+						</div>
+						<div class="relatedPropertyList well hidden"></div>
+						<div class="kbPropertyList well hidden">
+							<form role="form">
+								<div class="form-group">
+									<label for="ddlKnowledgeModel" class="control-label">Knowledge
+										source</label> <select class="form-control" id="ddlKnowledgeModel">
+										<option selected>Wordnet Domains</option>
+										<option disabled>Iconclass</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label for="lbKnowledgeBase" class="control-label">Select
+										knowledge domains </label><select multiple id="lbKnowledgeBase"
+										data-field="lbKnowledgeBase"></select>
+								</div>
+							</form>
+						</div>
+						<div class="hidden"></div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" data-field="btnAddTerms"
+							class="btn btn-primary" data-dismiss="modal">Add terms</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="evidence1" tabindex="-1" role="dialog"
+			aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">
+							Evidence for potential expert <strong>birdsbirdsbirds</strong>
+						</h4>
+					</div>
+					<div class="modal-body">
+						<p class="bg-warning">Evidence not gathered</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="evidence3" tabindex="-1" role="dialog"
+			aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">
+							Evidence for potential expert <strong>constantsun</strong>
+						</h4>
+					</div>
+					<div class="modal-body">
+						<p class="bg-warning">Evidence not gathered</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="evidence4" tabindex="-1" role="dialog"
+			aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">
+							Evidence for potential expert <strong>hotspotbirding</strong>
+						</h4>
+					</div>
+					<div class="modal-body">
+						<img src="./images/evidence.png">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

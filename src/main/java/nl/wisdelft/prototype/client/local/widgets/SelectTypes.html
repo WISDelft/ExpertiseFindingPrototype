@@ -1,0 +1,41 @@
+<div class="app-template">
+	<div class="row">
+		<div class="col-12 col-sm-12 col-lg-12">
+			<h2>Select relevant types</h2>
+			<p class="bg-info img-rounded">
+				The left-hand box shows all
+				<code>dcterms:subject</code>
+				resources for the selected page. Drag the types you want to compare to the
+				right-hand box.
+			</p>
+		</div>
+		<div class="col-5 col-lg-5 col-sm-12">
+			<select multiple class="form-control entities" id="typeAll">
+				<option>dbpedia-owl:ArchitecturalStructure</option>
+				<option>dbpedia-owl:Building</option>
+				<option>dbpedia-owl:Church</option>
+				<option>dbpedia-owl:Place</option>
+				<option>dbpedia-owl:ReligiousBuilding</option>
+				<option>dbpedia-owl:Wikidata:Q532</option>
+				<option>http://schema.org/Place</option>
+				<option>owl:Thing</option>
+				<option>dbpedia-nl:Categorie:Kerkgebouw_in_Delft</option>
+				<option>dbpedia-nl:Categorie:Luthers_kerkgebouw_in_Nederland</option>
+				<option>dbpedia-nl:Categorie:Rijksmonument_in_Delft</option>
+			</select>
+		</div>
+		<div id="moveButtons" class="col-2 col-lg-2 col-sm-12">
+			<button type="button" class="btn btn-default" id="btnLeftType">
+				<span class="glyphicon glyphicon-arrow-left"></span>
+			</button>
+			<button type="button" class="btn btn-default" id="btnRightType">
+				<span class="glyphicon glyphicon-arrow-right"></span>
+			</button>
+		</div>
+		<div class="col-5 col-lg-5 col-sm-12">
+			<select multiple class="form-control entities" id="typeSelected">
+			</select>
+		</div>
+	</div>
+</div>
+
