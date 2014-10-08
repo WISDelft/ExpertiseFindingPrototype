@@ -2,7 +2,7 @@ Expertise Finding prototype
 =====================
 This Expertise Finding prototype is part of the WUDE framework which consists of multiple components that contribute to the research done in the WUDE workpackage (WP5) of the SEALINCMedia project (P6) of the COMMIT public-private research community.
 
-Expertise finding involves the following steps. First the knowledge need is specified, followed by the extraction of content that potentially contains knowledge evidence. This content is analyzed and the contained knowledge is verified which leads to the identification of valueable content (internal or external) and valueable persons (experts) relevant for the knowledge need. These steps are depicted in the following image.
+Expertise finding involves the following steps. First the knowledge need is specified, followed by the extraction of content that potentially contains knowledge evidence. This content is analyzed and the contained knowledge is verified which leads to the identification of valuable content (internal or external) and valuable persons (experts) relevant for the knowledge need. These steps are depicted in the following image.
 
 <img src="https://docs.google.com/drawings/d/1TcerCV6YxAv0d5i6tHwfzKMTYAjkVKbk9qY4HtDjBOY/pub?w=1082&amp;h=228">
 
